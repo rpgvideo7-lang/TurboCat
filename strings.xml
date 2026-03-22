@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Turbo Cats</string>
+    <string name="title_activity_main">Turbo Cats</string>
+    <string name="package_name">com.turbocats.game</string>
+    <string name="custom_url_scheme">com.turbocats.game</string>
+</resources>
