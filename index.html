@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Turbo Cats - 16-bit retro side-scrolling runner game">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Turbo Cats">
+<link rel="manifest" href="manifest.json">
 <title>TURBO CATS</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -836,6 +843,15 @@ function draw(t){
 // ══════════════════════════════════════
 function loop(t){update();draw(t);requestAnimationFrame(loop);}
 requestAnimationFrame(loop);
+
+// Register service worker for PWA
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js')
+      .then(()=>console.log('SW registered'))
+      .catch(e=>console.log('SW failed:',e));
+  });
+}
 </script>
 </body>
 </html>
