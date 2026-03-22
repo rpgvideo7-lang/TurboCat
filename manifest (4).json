@@ -1,0 +1,12 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Turbo Cat",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "TurboCat",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "description": "Short Description of TurboCat"
+}
